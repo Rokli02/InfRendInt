@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Not Found</title>
+  <script>
+    function stepBack() {
+      window.history.replaceState(null, null, "/");
+      window.location.reload()
+    }
+  </script>
+  <style>
+    a {
+      cursor: pointer;
+      color: rgb(60, 60, 228);
+      font-weight: 600;
+      font-size: 1.25em;
+    }
+
+    a:active {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Page '${PATH}' is not found, 404</h1>
+  <a onclick="stepBack()">Return to the previous page</a>
+</body>
+</html>
